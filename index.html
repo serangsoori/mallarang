@@ -6,10 +6,16 @@
 <title>말랑pick</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Memoment';
+  src: url('/s-cart/fonts/MemomentKkukkukk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Noto Sans KR",sans-serif;background:#fff5f8;color:#2d1a22;min-height:100vh}
 nav{background:#fff;border-bottom:1px solid #f4c0d1;padding:0 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300;height:52px}
-.logo{font-size:17px;font-weight:700;color:#2d1a22;cursor:pointer}
+.logo{font-size:20px;font-weight:700;color:#2d1a22;cursor:pointer;font-family:"Memoment",sans-serif}
 .logo em{color:#d4537e;font-style:normal}
 .nav-tabs{display:flex;overflow-x:auto;scrollbar-width:none}
 .nav-tabs::-webkit-scrollbar{display:none}
@@ -33,7 +39,7 @@ nav{background:#fff;border-bottom:1px solid #f4c0d1;padding:0 24px;display:flex;
 .step-label{font-size:10px;color:#993556;font-weight:500;white-space:nowrap}
 .step-line{height:2px;background:#f4c0d1;flex:1;margin-top:-20px;transition:background .3s}
 .step-line.done{background:#d4537e}
-.step-title{font-size:20px;font-weight:700;color:#2d1a22;margin-bottom:6px}
+.step-title{font-size:22px;font-weight:700;color:#2d1a22;margin-bottom:6px;font-family:"Memoment",sans-serif}
 .step-sub{font-size:13px;color:#993556;margin-bottom:20px;line-height:1.6}
 
 /* 카테고리 필터 */
@@ -118,7 +124,7 @@ nav{background:#fff;border-bottom:1px solid #f4c0d1;padding:0 24px;display:flex;
 /* 말랑이 목록 */
 .list-hero{background:linear-gradient(135deg,#fbeaf0,#fce8f3);border-bottom:1px solid #f4c0d1;padding:44px 32px 32px}
 .list-hero-inner{max-width:1080px;margin:0 auto}
-.section-title{font-size:20px;font-weight:700;color:#2d1a22;margin-bottom:4px}
+.section-title{font-size:22px;font-weight:700;color:#2d1a22;margin-bottom:4px;font-family:"Memoment",sans-serif}
 .section-sub{font-size:13px;color:#993556}
 .list-wrap{max-width:1080px;margin:0 auto;padding:26px 28px}
 .top-controls{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
@@ -294,7 +300,7 @@ footer strong{color:#fff}
   <div class="list-hero">
     <div class="list-hero-inner" style="text-align:center">
       <div style="font-size:11px;font-weight:700;color:#d4537e;letter-spacing:.08em;margin-bottom:10px">주인장 직접 검증</div>
-      <div style="font-size:28px;font-weight:700;color:#2d1a22;line-height:1.3;margin-bottom:8px;letter-spacing:-.5px">말랑이, 더 이상<br><span style="color:#d4537e">비싸게 사지 않는다.</span></div>
+      <div style="font-size:32px;font-weight:700;color:#2d1a22;line-height:1.4;margin-bottom:8px;font-family:'Memoment',sans-serif">말랑이, 더 이상<br><span style="color:#d4537e">비싸게 사지 않는다.</span></div>
       <div style="font-size:13px;color:#993556;line-height:1.8;margin-bottom:16px">직구는 어렵고 말랑이는 비싸니까,<br>주인장이 대신 찾아왔어요.</div>
       <div style="background:#fff;border:1px solid #f4c0d1;border-radius:14px;padding:14px 20px;font-size:12px;color:#72243e;line-height:1.9;display:inline-block;text-align:center">
         <div style="font-weight:700;color:#d4537e;margin-bottom:6px;font-size:13px">구매 전 꼭 읽어주세요</div>
@@ -368,116 +374,58 @@ function fmtCny(c) { return c + '위안'; }
 function fmtKrw(c) { const k = krw(c); return isNaN(k) ? c : '약 ' + k.toLocaleString() + '원'; }
 
 const IMGS = {
-  mango: "images/mango.jpg",
-  strawberry: "images/strawberry.jpg",
-  cheese: "images/cheese.jpg",
-  bread: "images/bread.jpg",
-  peanut: "images/peanut.jpg",
-  pink: "images/pink.jpg",
-  glitter: "images/glitter.jpg",
-  tofu: "images/tofu.jpg",
-  mantou: "images/mantou.jpg",
-  glitter_ball: "images/glitter_ball.jpg",
-  corn: "images/corn.jpg",
-  sushi_ball: "images/sushi_ball.jpg",
-  tomato: "images/tomato.jpg",
-  ponyo: "images/ponyo.jpg",
-  hotdog: "images/hotdog.jpg",
-  fruits_ball: "images/fruits_ball.jpg",
-  garlic: "images/garlic.jpg",
-  asasak: "images/asasak.jpg",
-  kuma_gam: "images/kuma_gam.jpg",
-  gamja: "images/gamja.jpg",
-  marshmallow: "images/marshmallow.jpg",
-  gyul: "images/gyul.jpg",
-  noran_bread: "images/bread.jpg",
-  daewang_bread: "images/daewang_bread.jpg",
-  dol: "images/dol.jpg",
-  strawberry_crunch: "images/strawberry_crunch.jpg",
-  peanut_crunch: "images/peanut_crunch.jpg",
-  lemon: "images/lemon.jpg",
-  melon_bread: "images/bread.jpg",
-  morning_bread: "images/morning_bread.jpg",
-  kuma_mu: "images/kuma_mu.jpg",
-  mini_gamja: "images/gamja.jpg",
-  kuma_banana: "images/kuma_banana.jpg",
-  kuma_glitter: "images/glitter.jpg",
-  pillow: "images/pillow.jpg",
-  butter: "images/butter.jpg",
-  soap: "images/soap.jpg",
-  milk_bread: "images/bread.jpg",
-  plum: "images/plum.jpg",
-  cow_choco: "images/cow_choco.jpg",
-  choco_pie: "images/choco_pie.jpg",
-  croissant: "images/croissant.jpg",
-  trans_fruit: "images/trans_fruit.jpg",
-  trans_asasak: "images/asasak.jpg",
-  trans_chewy: "images/trans_chewy.jpg",
-  trans_apple: "images/trans_apple.jpg",
-  trans_toothpaste: "images/trans_toothpaste.jpg",
-  trans_cheese: "images/cheese.jpg",
-  twigim2: "images/twigim2.jpg",
-  twigim: "images/twigim.jpg",
-  kuma_pineapple: "images/kuma_pineapple.jpg",
-  pudding: "images/pudding.jpg",
-  // 신규 이미지 (이미지 파일 저장 필요)
-  rice_ball: "images/rice_ball.jpg",          // 볶음밥 쌀알 파츠 수제볼
-  pearl_apple: "images/pearl_apple.jpg",      // 펄 사과 수제볼 (홀로그램 사과)
-  hamburger: "images/hamburger.jpg",          // 햄버거 크런치 말랑이
-  red_apple: "images/red_apple.jpg",          // 빨간 사과 수제볼 (NZ Queen)
-  pig_crunch: "images/pig_crunch.jpg",        // 핑크 돼지 크런치 볼
-  bubble_ball: "images/bubble_ball.jpg",      // 투명 동글 파츠 스트레스볼 (4색)
-  pebble_ball: "images/pebble_ball.jpg",      // 투명 조약돌 파츠 말랑이 (파란 자갈)
-  banana_fruit: "images/banana_fruit.jpg",    // 투명 바나나 후르츠 파츠 말랑이
-  blueberry_bottle: "images/blueberry_bottle.jpg",
-  fur_bear: "images/fur_bear.jpg",            // 폭신 털 곰돌이 말랑이
-  glitter_tube: "images/glitter_tube.jpg",    // 치약 투명 글리터 말랑이 (3색)
-  kitty_bottle: "images/kitty_bottle.jpg",    // 핑크 키티 투명 물병 말랑이
-  kitty_pink: "images/kitty_pink.jpg",        // 핑크 키티 투명 푸딩 말랑이
-  kitty_pudding: "images/kitty_pudding.jpg",  // 키티 푸딩 말랑이 (초코 푸딩)
-  pink_bunny: "images/pink_bunny.jpg",        // 핑크 별 투명 꺼만말 (토끼 사각형)
-  rilakkuma: "images/rilakkuma.jpg",           // 리락쿠마 홀로그램 꺼만말
-  crystal_tube: "images/crystal_tube.jpg",    // 치약 투명 파츠 말랑이 (크리스탈 3색)
-  grapefruit: "images/grapefruit.jpg",        // 귤 꺼만말
-  snowball: "images/snowball.jpg",            // 눈꽃 자잘파츠 크런치 수제볼
-  autumn_ball: "images/autumn_ball.jpg",      // 단풍 레고파츠 수제볼
-  durian: "images/durian.jpg",                // 두리안 크런치 말랑이
-  lime_ball: "images/lime_ball.jpg",          // 라임 투명 아사삭 크런치 수제볼
-  red_ice: "images/red_ice.jpg",              // 레드 아이스 볼
-  mandu: "images/mandu.jpg",                  // 만두 투명 파츠 말랑이 (찐빵형)
-  melon_ball: "images/melon_ball.jpg",        // 메론 크림 크런치 수제볼
-  miffy: "images/miffy.jpg",                  // 미피 크런치 수제볼
-  banana_choco: "images/banana_choco.jpg",    // 바나나 초코 크런치 수제볼
-  pastel_bumpy: "images/pastel_bumpy.jpg",    // 핑크 조약돌 크런치 말랑이
-  sakura_ball: "images/sakura_ball.jpg",      // 벚꽃 투명 파츠 크런치 수제볼
-  sakura_pressed: "images/sakura_pressed.jpg",// 벚꽃 자잘파츠 크런치 수제볼
-  kiwi_square: "images/kiwi_square.jpg",      // 사각 키위 꺼만말
-  square_cube: "images/square_cube.jpg",      // 사각 투명 아사삭 수제볼 (Chiboki 큐브)
-  wine_apple: "images/wine_apple.jpg",        // 사과 자몽파츠 투명 수제볼 (핫와인 사과)
-  watermelon_ball: "images/watermelon_ball.jpg", // 수박 아사삭 수제볼
-  bear_snack: "images/bear_snack.jpg",        // 슈크림 3개 꺼만말 (곰돌이 스낵형)
-  snoopy: "images/snoopy.jpg",                // 스누피 수플레 꺼만말
-  sikhye: "images/sikhye.jpg",                // 식혜 크런치 수제볼
-  icecream_spoon: "images/icecream_spoon.jpg",// 아이스크림 스푼 꺼만말
-  dragonfruit: "images/dragonfruit.jpg",      // 용과 크런치 말랑이
-  cow_ball: "images/cow_ball.jpg",            // 젓소 크런치 수제볼
-  chicken_fries: "images/chicken_fries.jpg",  // 치킨 프렌치프라이 크런치 수제볼
-  cola_cup: "images/cola_cup.jpg",            // 콜라 크런치 말랑이
-  kitty: "images/kitty.jpg",                  // 키티 꺼만말 (헬로키티)
-  pink_blobs: "images/pink_blobs.jpg",        // 핑크 조약돌 loose 타입
-  barbie_heart: "images/barbie_heart.jpg",    // 하트 투명 레고 파츠 수제볼
-  honey_apple: "images/honey_apple.jpg",      // 투명 벌꿀 사과모양 수제볼
-  wood_ball: "images/wood_ball.jpg",          // 투명 우드 수제볼 (나무 풍로 파츠)
-  fry: "images/fry.png",                      // 프라이 크런치 말랑이
-  fruit_ice: "images/fruit_ice.jpg",          // 과일 얼음 치즈 말랑이
-  jeonbyeong: "images/jeonbyeong.jpg",        // 투명 전병 크런치 말랑이
-  soap_blue: "images/soap_blue.jpg",          // 파랑 비누 크런치 말랑이
-  pastel_bumpy2: "images/pastel_bumpy2.jpg",  // 핑크 조약돌 크런치 말랑이
-  foam_ball: "images/foam_ball.jpg",          // 바삭 쫀득 폼 크런치 말랑이
-  pink_star: "images/pink_star.jpg",          // 핑크 별 투명 꺼만말
-  kuma_mandu2: "images/kuma_mandu2.jpg",      // 쿠마 글리터 만두 말랑이
-  kuma_glitter2: "images/kuma_glitter2.jpg",  // 쿠마 글리터 말랑이
-  kuma_castella: "images/kuma_castella.jpg",  // 쿠마 카스테라 말랑이
+  mango: "/s-cart/images/mango.jpg",
+  strawberry: "/s-cart/images/strawberry.jpg",
+  cheese: "/s-cart/images/cheese.jpg",
+  bread: "/s-cart/images/bread.jpg",
+  peanut: "/s-cart/images/peanut.jpg",
+  pink: "/s-cart/images/pink.jpg",
+  glitter: "/s-cart/images/glitter.jpg",
+  tofu: "/s-cart/images/tofu.jpg",
+  mantou: "/s-cart/images/mantou.jpg",
+  glitter_ball: "/s-cart/images/glitter_ball.jpg",
+  corn: "/s-cart/images/corn.jpg",
+  sushi_ball: "/s-cart/images/sushi_ball.jpg",
+  tomato: "/s-cart/images/tomato.jpg",
+  ponyo: "/s-cart/images/ponyo.jpg",
+  hotdog: "/s-cart/images/hotdog.jpg",
+  fruits_ball: "/s-cart/images/fruits_ball.jpg",
+  garlic: "/s-cart/images/garlic.jpg",
+  asasak: "/s-cart/images/asasak.jpg",
+  kuma_gam: "/s-cart/images/kuma_gam.jpg",
+  gamja: "/s-cart/images/gamja.jpg",
+  marshmallow: "/s-cart/images/marshmallow.jpg",
+  gyul: "/s-cart/images/gyul.jpg",
+  noran_bread: "/s-cart/images/bread.jpg",
+  daewang_bread: "/s-cart/images/bread.jpg",
+  dol: "/s-cart/images/dol.jpg",
+  strawberry_crunch: "/s-cart/images/strawberry_crunch.jpg",
+  peanut_crunch: "/s-cart/images/peanut_crunch.jpg",
+  lemon: "/s-cart/images/lemon.jpg",
+  melon_bread: "/s-cart/images/bread.jpg",
+  morning_bread: "/s-cart/images/bread.jpg",
+  kuma_mu: "/s-cart/images/kuma_mu.jpg",
+  mini_gamja: "/s-cart/images/gamja.jpg",
+  kuma_banana: "/s-cart/images/kuma_banana.jpg",
+  kuma_glitter: "/s-cart/images/glitter.jpg",
+  pillow: "/s-cart/images/pillow.jpg",
+  butter: "/s-cart/images/butter.jpg",
+  soap: "/s-cart/images/soap.jpg",
+  milk_bread: "/s-cart/images/bread.jpg",
+  plum: "/s-cart/images/plum.jpg",
+  cow_choco: "/s-cart/images/cow_choco.jpg",
+  choco_pie: "/s-cart/images/choco_pie.jpg",
+  croissant: "/s-cart/images/croissant.jpg",
+  trans_fruit: "/s-cart/images/trans_fruit.jpg",
+  trans_asasak: "/s-cart/images/asasak.jpg",
+  trans_chewy: "/s-cart/images/trans_chewy.jpg",
+  trans_apple: "/s-cart/images/trans_apple.jpg",
+  trans_toothpaste: "/s-cart/images/trans_toothpaste.jpg",
+  trans_cheese: "/s-cart/images/cheese.jpg",
+  twigim2: "/s-cart/images/twigim2.jpg",
+  twigim: "/s-cart/images/twigim.jpg",
+  kuma_pineapple: "/s-cart/images/kuma_pineapple.jpg",
+  pudding: "/s-cart/images/pudding.jpg",
 };
 
 
@@ -644,60 +592,60 @@ const PRODUCTS = [
     sellers:[{id:"chiboki",cny:"39.8"},{id:"hello",cny:"39.8"}]},
 
   // ── 신규 추가 (48~) ──
-  {id:47, name:"사과 투명 수제볼",            cat:"투명",   img:"wine_apple",    sellers:[{id:"chiboki",cny:"27.9"}]},
-  {id:48, name:"투명 동글 파츠 스트레스볼",    cat:"투명",   img:"bubble_ball",   sellers:[{id:"chiboki",cny:"24.9"}]},
-  {id:49, name:"치약 투명 파츠 말랑이",        cat:"투명",   img:"crystal_tube",  sellers:[{id:"chiboki",cny:"42.9"}]},
-  {id:50, name:"투명 바나나 후르츠 파츠 말랑이",cat:"투명",  img:"banana_fruit",  sellers:[{id:"chiboki",cny:"27.9"}]},
-  {id:51, name:"투명 조약돌 파츠 말랑이",      cat:"투명",   img:"pebble_ball",   sellers:[{id:"chiboki",cny:"18.9"}]},
-  {id:52, name:"치약 투명 글리터 말랑이",      cat:"투명",   img:"glitter_tube",  sellers:[{id:"chiboki",cny:"27.9"}]},
-  {id:53, name:"투명 물병 블루베리 파츠 말랑이",cat:"투명",  img:"blueberry_bottle", sellers:[{id:"chiboki",cny:"27.9"}]},
-  {id:54, name:"쿠마 글리터 만두 말랑이",      cat:"꺼만말", img:"kuma_mandu2",   sellers:[{id:"xiaojiu",cny:"26.8"}]},
-  {id:55, name:"쿠마 글리터 말랑이",           cat:"꺼만말", img:"kuma_glitter2", sellers:[{id:"xiaojiu",cny:"26.8"}]},
-  {id:56, name:"쿠마 카스테라 말랑이",         cat:"꺼만말", img:"kuma_castella", sellers:[{id:"xiaojiu",cny:"21.8"}]},
-  {id:57, name:"키티 푸딩 말랑이",             cat:"꺼만말", img:"kitty_pudding",  sellers:[{id:"xiaojiu",cny:"26.8"}]},
-  {id:58, name:"핑크 키티 투명 푸딩 말랑이",   cat:"꺼만말", img:"kitty_pink",     sellers:[{id:"xiaojiu",cny:"28.8"}]},
-  {id:59, name:"폭신 털 곰돌이 말랑이",        cat:"꺼만말", img:"fur_bear",       sellers:[{id:"xiaojiu",cny:"27.8"}]},
-  {id:60, name:"핑크 키티 투명 물병 말랑이",   cat:"꺼만말", img:"kitty_bottle",   sellers:[{id:"xiaojiu",cny:"25.8"}]},
-  {id:61, name:"핑크 별 투명 꺼만말",          cat:"꺼만말", img:"pink_star",      sellers:[{id:"xiaojiu",cny:"27.8"}]},
-  {id:62, name:"키티 만터우 꺼만말",           cat:"꺼만말", img:"kitty",          sellers:[{id:"xiaojiu",cny:"26.8"}]},
-  {id:63, name:"사각 키위 꺼만말",             cat:"꺼만말", img:"kiwi_square",    sellers:[{id:"xiaojiu",cny:"27.8"}]},
-  {id:64, name:"귤 꺼만말",                    cat:"꺼만말", img:"grapefruit",     sellers:[{id:"xiaojiu",cny:"25.8"}]},
-  {id:65, name:"스누피 수플레 꺼만말",         cat:"꺼만말", img:"snoopy",         sellers:[{id:"xiaojiu",cny:"26.8"}]},
-  {id:66, name:"젓소 크런치 수제볼",           cat:"투명",   img:"cow_ball",       sellers:[{id:"sweet",cny:"18.8"}]},
-  {id:67, name:"수박 아사삭 수제볼",           cat:"투명",   img:"watermelon_ball",sellers:[{id:"sweet",cny:"14"}]},
-  {id:68, name:"하트 투명 레고 파츠 수제볼",   cat:"투명",   img:"barbie_heart",   sellers:[{id:"sweet",cny:"21"}]},
-  {id:69, name:"볶음밥 쌀알 파츠 수제볼",      cat:"투명",   img:"rice_ball",      sellers:[{id:"sweet",cny:"18.9"}]},
-  {id:70, name:"단풍 레고파츠 수제볼",         cat:"투명",   img:"autumn_ball",    sellers:[{id:"sweet",cny:"21.8"}]},
-  {id:71, name:"만두 투명 파츠 말랑이",        cat:"투명",   img:"mandu",          sellers:[{id:"sweet",cny:"28"}]},
-  {id:72, name:"미피 크런치 수제볼",           cat:"투명",   img:"miffy",          sellers:[{id:"sweet",cny:"18.8"}]},
-  {id:73, name:"치킨 프렌치프라이 크런치 수제볼",cat:"투명", img:"chicken_fries",  sellers:[{id:"sweet",cny:"18.8"}]},
-  {id:74, name:"레드 아이스 볼",               cat:"투명",   img:"red_ice",        sellers:[{id:"sweet",cny:"21.9"}]},
-  {id:75, name:"라임 투명 아사삭 크런치 수제볼",cat:"투명",  img:"lime_ball",      sellers:[{id:"sweet",cny:"15.8"}]},
-  {id:76, name:"벚꽃 투명 파츠 크런치 수제볼", cat:"투명",   img:"sakura_ball",    sellers:[{id:"sweet",cny:"14"}]},
-  {id:77, name:"바나나 초코 크런치 수제볼",    cat:"투명",   img:"banana_choco",   sellers:[{id:"sweet",cny:"18.8"}]},
-  {id:78, name:"식혜 크런치 수제볼",           cat:"투명",   img:"sikhye",         sellers:[{id:"sweet",cny:"18"}]},
-  {id:79, name:"눈꽃 자잘파츠 크런치 수제볼",  cat:"투명",   img:"snowball",       sellers:[{id:"sweet",cny:"17"}]},
-  {id:80, name:"메론 크림 크런치 수제볼",      cat:"투명",   img:"melon_ball",     sellers:[{id:"sweet",cny:"23"}]},
-  {id:81, name:"벚꽃 자잘파츠 크런치 수제볼",  cat:"투명",   img:"sakura_pressed", sellers:[{id:"sweet",cny:"17"}]},
-  {id:82, name:"프라이 크런치 말랑이",         cat:"크런치", img:"fry",            sellers:[{id:"juju",cny:"22.8"}]},
-  {id:83, name:"콜라 크런치 말랑이",           cat:"크런치", img:"cola_cup",       sellers:[{id:"juju",cny:"22.8"}]},
-  {id:84, name:"과일 얼음 치즈 말랑이",        cat:"크런치", img:"fruit_ice",      sellers:[{id:"juju",cny:"29.8"}]},
-  {id:85, name:"투명 전병 크런치 말랑이",      cat:"크런치", img:"jeonbyeong",     sellers:[{id:"juju",cny:"22.8"}]},
-  {id:86, name:"햄버거 크런치 말랑이",         cat:"크런치", img:"hamburger",      sellers:[{id:"juju",cny:"22.8"}]},
-  {id:87, name:"핑크 비누 크런치 말랑이",      cat:"크런치", img:"pastel_bumpy",   sellers:[{id:"yuuu",cny:"22"}]},
-  {id:88, name:"파랑 비누 크런치 말랑이",      cat:"크런치", img:"soap_blue",      sellers:[{id:"yuuu",cny:"22"}]},
-  {id:89, name:"용과 크런치 말랑이",           cat:"크런치", img:"dragonfruit",    sellers:[{id:"yuuu",cny:"18.9"}]},
-  {id:90, name:"두리안 크런치 말랑이",         cat:"크런치", img:"durian",         sellers:[{id:"yuuu",cny:"22"}]},
-  {id:91, name:"핑크 조약돌 크런치 말랑이",    cat:"크런치", img:"pastel_bumpy2",  sellers:[{id:"yuuu",cny:"12.99"}]},
-  {id:92, name:"슈크림 3개 꺼만말",            cat:"꺼만말", img:"bear_snack",     sellers:[{id:"yuuu",cny:"25.6"}]},
-  {id:93, name:"바삭 쫀득 폼 크런치 말랑이",   cat:"크런치", img:"foam_ball",      sellers:[{id:"yuuu",cny:"10.88"}]},
-  {id:94, name:"투명 우드 수제볼",             cat:"투명",   img:"wood_ball",      sellers:[{id:"yuuu",cny:"9.99"}]},
-  {id:95, name:"아이스크림 스푼 꺼만말",       cat:"꺼만말", img:"icecream_spoon", sellers:[{id:"yuuu",cny:"19.9"}]},
-  {id:96, name:"사과 자몽파츠 투명 수제볼",    cat:"투명",   img:"wine_apple",     sellers:[{id:"chiboki",cny:"29.8"}]},
-  {id:97, name:"사각 투명 아사삭 수제볼",      cat:"투명",   img:"square_cube",    sellers:[{id:"chiboki",cny:"22.9"}]},
-  {id:98, name:"투명 벌꿀 사과모양 수제볼",    cat:"투명",   img:"honey_apple",    sellers:[{id:"chiboki",cny:"29.8"}]},
-  {id:99, name:"펄 사과 수제볼",               cat:"투명",   img:"pearl_apple",    sellers:[{id:"chiboki",cny:"28.9"}]},
-  {id:100, name:"무광 비누 크런치 말랑이",     cat:"크런치", img:"square_cube",    emoji:"🫧", sellers:[{id:"yuuu",cny:"7.9"}]},
+  {id:47, name:"사과 투명 수제볼",            cat:"투명",   img:null, emoji:"🍎", sellers:[{id:"chiboki",cny:"27.9"}]},
+  {id:48, name:"투명 동글 파츠 스트레스볼",    cat:"투명",   img:null, emoji:"🔮", sellers:[{id:"chiboki",cny:"24.9"}]},
+  {id:49, name:"치약 투명 파츠 말랑이",        cat:"투명",   img:null, emoji:"🪥", sellers:[{id:"chiboki",cny:"42.9"}]},
+  {id:50, name:"투명 바나나 후르츠 파츠 말랑이",cat:"투명",  img:null, emoji:"🍌", sellers:[{id:"chiboki",cny:"27.9"}]},
+  {id:51, name:"투명 조약돌 파츠 말랑이",      cat:"투명",   img:null, emoji:"🪨", sellers:[{id:"chiboki",cny:"18.9"}]},
+  {id:52, name:"치약 투명 글리터 말랑이",      cat:"투명",   img:null, emoji:"✨", sellers:[{id:"chiboki",cny:"27.9"}]},
+  {id:53, name:"투명 물병 블루베리 파츠 말랑이",cat:"투명",  img:null, emoji:"🫐", sellers:[{id:"chiboki",cny:"27.9"}]},
+  {id:54, name:"쿠마 글리터 만두 말랑이",      cat:"꺼만말", img:null, emoji:"🥟", sellers:[{id:"xiaojiu",cny:"26.8"}]},
+  {id:55, name:"쿠마 글리터 말랑이",           cat:"꺼만말", img:null, emoji:"🐻", sellers:[{id:"xiaojiu",cny:"26.8"}]},
+  {id:56, name:"쿠마 카스테라 말랑이",         cat:"꺼만말", img:null, emoji:"🍰", sellers:[{id:"xiaojiu",cny:"21.8"}]},
+  {id:57, name:"키티 푸딩 말랑이",             cat:"꺼만말", img:null, emoji:"🐱", sellers:[{id:"xiaojiu",cny:"26.8"}]},
+  {id:58, name:"핑크 키티 투명 푸딩 말랑이",   cat:"꺼만말", img:null, emoji:"🐱", sellers:[{id:"xiaojiu",cny:"28.8"}]},
+  {id:59, name:"폭신 털 곰돌이 말랑이",        cat:"꺼만말", img:null, emoji:"🧸", sellers:[{id:"xiaojiu",cny:"27.8"}]},
+  {id:60, name:"핑크 키티 투명 물병 말랑이",   cat:"꺼만말", img:null, emoji:"🍼", sellers:[{id:"xiaojiu",cny:"25.8"}]},
+  {id:61, name:"핑크 별 투명 꺼만말",          cat:"꺼만말", img:null, emoji:"⭐", sellers:[{id:"xiaojiu",cny:"27.8"}]},
+  {id:62, name:"키티 만터우 꺼만말",           cat:"꺼만말", img:null, emoji:"🥟", sellers:[{id:"xiaojiu",cny:"26.8"}]},
+  {id:63, name:"사각 키위 꺼만말",             cat:"꺼만말", img:null, emoji:"🥝", sellers:[{id:"xiaojiu",cny:"27.8"}]},
+  {id:64, name:"귤 꺼만말",                    cat:"꺼만말", img:null, emoji:"🍊", sellers:[{id:"xiaojiu",cny:"25.8"}]},
+  {id:65, name:"스누피 수플레 꺼만말",         cat:"꺼만말", img:null, emoji:"🐶", sellers:[{id:"xiaojiu",cny:"26.8"}]},
+  {id:66, name:"젓소 크런치 수제볼",           cat:"투명",   img:null, emoji:"🐄", sellers:[{id:"sweet",cny:"18.8"}]},
+  {id:67, name:"수박 아사삭 수제볼",           cat:"투명",   img:null, emoji:"🍉", sellers:[{id:"sweet",cny:"14"}]},
+  {id:68, name:"하트 투명 레고 파츠 수제볼",   cat:"투명",   img:null, emoji:"🧱", sellers:[{id:"sweet",cny:"21"}]},
+  {id:69, name:"볶음밥 쌀알 파츠 수제볼",      cat:"투명",   img:null, emoji:"🍚", sellers:[{id:"sweet",cny:"18.9"}]},
+  {id:70, name:"단풍 레고파츠 수제볼",         cat:"투명",   img:null, emoji:"🍁", sellers:[{id:"sweet",cny:"21.8"}]},
+  {id:71, name:"만두 투명 파츠 말랑이",        cat:"투명",   img:null, emoji:"🥟", sellers:[{id:"sweet",cny:"28"}]},
+  {id:72, name:"미피 크런치 수제볼",           cat:"투명",   img:null, emoji:"🐰", sellers:[{id:"sweet",cny:"18.8"}]},
+  {id:73, name:"치킨 프렌치프라이 크런치 수제볼",cat:"투명", img:null, emoji:"🍟", sellers:[{id:"sweet",cny:"18.8"}]},
+  {id:74, name:"레드 아이스 볼",               cat:"투명",   img:null, emoji:"🔴", sellers:[{id:"sweet",cny:"21.9"}]},
+  {id:75, name:"라임 투명 아사삭 크런치 수제볼",cat:"투명",  img:null, emoji:"🍋", sellers:[{id:"sweet",cny:"15.8"}]},
+  {id:76, name:"벚꽃 투명 파츠 크런치 수제볼", cat:"투명",   img:null, emoji:"🌸", sellers:[{id:"sweet",cny:"14"}]},
+  {id:77, name:"바나나 초코 크런치 수제볼",    cat:"투명",   img:null, emoji:"🍌", sellers:[{id:"sweet",cny:"18.8"}]},
+  {id:78, name:"식혜 크런치 수제볼",           cat:"투명",   img:null, emoji:"🥤", sellers:[{id:"sweet",cny:"18"}]},
+  {id:79, name:"눈꽃 자잘파츠 크런치 수제볼",  cat:"투명",   img:null, emoji:"❄️", sellers:[{id:"sweet",cny:"17"}]},
+  {id:80, name:"메론 크림 크런치 수제볼",      cat:"투명",   img:null, emoji:"🍈", sellers:[{id:"sweet",cny:"23"}]},
+  {id:81, name:"벚꽃 자잘파츠 크런치 수제볼",  cat:"투명",   img:null, emoji:"🌸", sellers:[{id:"sweet",cny:"17"}]},
+  {id:82, name:"프라이 크런치 말랑이",         cat:"크런치", img:null, emoji:"🍳", sellers:[{id:"juju",cny:"22.8"}]},
+  {id:83, name:"콜라 크런치 말랑이",           cat:"크런치", img:null, emoji:"🥤", sellers:[{id:"juju",cny:"22.8"}]},
+  {id:84, name:"과일 얼음 치즈 말랑이",        cat:"크런치", img:null, emoji:"🍎", sellers:[{id:"juju",cny:"29.8"}]},
+  {id:85, name:"투명 전병 크런치 말랑이",      cat:"크런치", img:null, emoji:"🥞", sellers:[{id:"juju",cny:"22.8"}]},
+  {id:86, name:"햄버거 크런치 말랑이",         cat:"크런치", img:null, emoji:"🍔", sellers:[{id:"juju",cny:"22.8"}]},
+  {id:87, name:"핑크 비누 크런치 말랑이",      cat:"크런치", img:null, emoji:"🫧", sellers:[{id:"yuuu",cny:"22"}]},
+  {id:88, name:"파랑 비누 크런치 말랑이",      cat:"크런치", img:null, emoji:"🫧", sellers:[{id:"yuuu",cny:"22"}]},
+  {id:89, name:"용과 크런치 말랑이",           cat:"크런치", img:null, emoji:"🐉", sellers:[{id:"yuuu",cny:"18.9"}]},
+  {id:90, name:"두리안 크런치 말랑이",         cat:"크런치", img:null, emoji:"🟡", sellers:[{id:"yuuu",cny:"22"}]},
+  {id:91, name:"핑크 조약돌 크런치 말랑이",    cat:"크런치", img:null, emoji:"🪨", sellers:[{id:"yuuu",cny:"12.99"}]},
+  {id:92, name:"슈크림 3개 꺼만말",            cat:"꺼만말", img:null, emoji:"🍮", sellers:[{id:"yuuu",cny:"25.6"}]},
+  {id:93, name:"바삭 쫀득 폼 크런치 말랑이",   cat:"크런치", img:null, emoji:"☁️", sellers:[{id:"yuuu",cny:"10.88"}]},
+  {id:94, name:"투명 우드 수제볼",             cat:"투명",   img:null, emoji:"🪵", sellers:[{id:"yuuu",cny:"9.99"}]},
+  {id:95, name:"아이스크림 스푼 꺼만말",       cat:"꺼만말", img:null, emoji:"🍦", sellers:[{id:"yuuu",cny:"19.9"}]},
+  {id:96, name:"사과 자몽파츠 투명 수제볼",    cat:"투명",   img:null, emoji:"🍎", sellers:[{id:"chiboki",cny:"29.8"}]},
+  {id:97, name:"사각 투명 아사삭 수제볼",      cat:"투명",   img:null, emoji:"🟩", sellers:[{id:"chiboki",cny:"22.9"}]},
+  {id:98, name:"투명 벌꿀 사과모양 수제볼",    cat:"투명",   img:null, emoji:"🍯", sellers:[{id:"chiboki",cny:"29.8"}]},
+  {id:99, name:"펄 사과 수제볼",               cat:"투명",   img:null, emoji:"🍏", sellers:[{id:"chiboki",cny:"28.9"}]},
+  {id:100, name:"무광 비누 크런치 말랑이",     cat:"크런치", img:null, emoji:"🫧", sellers:[{id:"yuuu",cny:"7.9"}]},
   {id:37, name:"아사삭 두 컬러 말랑이",    emoji:"", img:"asasak",         cat:"슬랑이",
     sellers:[{id:"hello",cny:"13.8",note:"가게마다 이름이 달라요"}]},
 ];
